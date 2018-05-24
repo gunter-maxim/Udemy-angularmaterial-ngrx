@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
   productName = 'A Book';
   products = ['A book', 'A tree'];
+  
   constructor() {
     // setTimeout(() => {
     //   this.productName = 'A tree';
