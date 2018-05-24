@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
   productName = 'A Book';
   products = ['A book', 'A tree'];
-  productsTest = ['A book', 'A tree'];
 
   constructor() {
     // setTimeout(() => {
@@ -17,6 +16,10 @@ export class ProductsComponent implements OnInit {
    }
    onAddProduct() {
       this.products.push(this.productName);
+   }
+   onRemoveProduct(productName: string){
+    this.products = this.products.filter(p=> p!== productName)
+    console.log("evenhandler", productName );
    }
   ngOnInit() {
   }
