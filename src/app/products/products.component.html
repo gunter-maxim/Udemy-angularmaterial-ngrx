@@ -1,5 +1,12 @@
 <h1> My Products </h1>
-<input type="text"[(ngModel)] = "productName">
-<button (click)="onAddProduct()">Add Product</button>
+<form (ngSubmit)="onAddProduct(f)" #f="ngForm" >
+<!-- <input type="text"[(ngModel)] = "productName"> -->
+
+<input type="text" ngModel name ="productName" required>
+<!-- <button (click)="onAddProduct()">Add Product</button> -->
+<button type = "submit">Product</button> 
+
+</form>
+
 <app-product (productClicked)="onRemoveProduct(product)" *ngFor="let product of products" [productName]="product" ></app-product>
 
